@@ -1,0 +1,11 @@
+{
+    "filename": "test.json",
+    "content": {
+        "files": [
+            "class/Instance-Variable-vs-Class-Variable-list-pass.py",
+            "class/multi-inheritance.py",
+            "class/__str__.py",
+            "class/__repr__.py"
+        ]
+    }
+}
