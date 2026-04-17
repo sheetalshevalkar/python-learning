@@ -1,0 +1,27 @@
+name: Simple Test Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Enter environment name"
+        required: true
+        default: "dev"
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print Details
+        run: |
+          echo "Workflow started manually"
+          echo "Selected Environment: ${{ github.event.inputs.environment }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+
+      - name: Test Success
+        run: echo "Workflow completed successfully"
